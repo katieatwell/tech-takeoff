@@ -1,0 +1,12 @@
+@mixin background($position: center, $size: contain, $repeat: no-repeat) {
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
+}
+@mixin font($fontFamily: inherit, $color: inherit, $size: inherit, $weight: normal, $letter-spacing: normal) {
+  font-family: $fontFamily;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  letter-spacing: $letter-spacing;
+}

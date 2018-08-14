@@ -1,0 +1,9 @@
+- tt_images = ApplicationHelper::HERO_IMAGE
+#carousel.carousel.slide{"data-ride" => "carousel"}
+  .carousel-inner
+    - tt_images.each do |tt_image| 
+      - image = 'assets/' + tt_image
+      .carousel-item
+        .tt-hero-slide{:style => "background-image: url(#{image})"}
+    .hero-cta
+      Integrating Technology Into The Contrustion Industry

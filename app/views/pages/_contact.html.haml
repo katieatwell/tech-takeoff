@@ -1,0 +1,37 @@
+.row
+  .col-md-6.col-sm-12
+    %h1
+      Contact Us
+    %h3
+      Please contact us for more information regarding our products and services. We're excited to hear from you! 
+    .contact-links
+      = link_to '9815 Sam Furr Rd Ste J Huntersville, NC 28078', 'https://www.google.com/maps/place/9815+Sam+Furr+Rd+Ste+J,+Huntersville,+NC+28078/@35.44257,-80.8634474,17z/data=!3m1!4b1!4m5!3m4!1s0x8856a903eda0392f:0xf4a0eabb371b5b85!8m2!3d35.44257!4d-80.8612587', target: '_blank', class: 'tt-contact-link', id: 'map'
+      = link_to '(555)-555-5555', 'tel:(555)-555-5555', class: 'tt-contact-link', id: 'phone'
+      = link_to 'support@techtakeoff.com', 'mailto:support@techtakeoff.com', class: 'tt-contact-link', id: 'email'
+      = link_to 'Career Opportunities', '', target: '_blank',class: 'tt-contact-link', id: 'career'
+  .col-md-6.col-sm-12
+    %form
+      %fieldset
+        .row
+          %input{:type => 'text', :placeholder => 'Name'}
+        .row
+          %input{:type => 'text', :placeholder => 'Email Address'}
+        .row
+          %input{:type => 'text', :placeholder => 'Phone Number'}
+        .row
+          %textarea.comment{:type => 'text', :placeholder => 'Message' } 
+        .row
+          .button-div
+            %button{ :type => 'submit' }
+              Submit
+    -# = simple_form_for :contact, method: :post, role: "form", class: "form-horizontal" do |f| 
+    -#   .panel.panel-primary
+    -#     .panel-heading
+    -#       %p
+    -#         the login form
+    -#     .panel-body
+    -#       = f.input :email
+    -#       = f.input :password
+    -#       = f.input :remember_me, as: :boolean, label: false, inline_label: "Stay connected"
+    -#     .panel-footer
+    -#       = f.submit "Login", class: "btn btn-primary"

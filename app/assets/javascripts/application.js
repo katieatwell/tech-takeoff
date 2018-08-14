@@ -17,3 +17,22 @@
 //= require jquery3
 //= require bootstrap
 //= require_tree .
+
+$(document).ready(function() {
+	var heroSlider = function() {
+		var currentSlide = 0;
+		var count = $('.carousel-item').length;
+
+		$('.carousel-item').hide();
+		$('.carousel-item').eq(0).show();
+
+		setInterval(function() {    
+	    $('.carousel-item').eq(currentSlide).fadeOut(function () {
+	      $(this).removeClass('active');
+	      currentSlide = (currentSlide + 1) % count;
+	      $('.carousel-item').eq(currentSlide).addClass('active').fadeIn();
+	    })
+		}, 5000)
+	}
+	heroSlider();
+})

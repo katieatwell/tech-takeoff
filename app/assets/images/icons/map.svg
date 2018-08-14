@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="32px" viewBox="0 0 26 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Location_Pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mockup" transform="translate(-113.000000, -4122.000000)" fill="#0F7AC4" fill-rule="nonzero">
+            <path d="M126,4122 C118.825371,4122 113,4127.43915 113,4134.1381 C113,4142.71676 122.337727,4151.29542 125.186161,4153.71504 C125.635914,4154.09499 126.364086,4154.09499 126.813839,4153.71504 C129.662273,4151.29542 139,4142.71676 139,4134.1381 C139,4127.43915 133.174629,4122 126,4122 Z M126,4139.99719 C122.444811,4139.99719 119.574959,4137.31761 119.574959,4133.99813 C119.574959,4130.67864 122.444811,4127.99906 126,4127.99906 C129.555189,4127.99906 132.425041,4130.67864 132.425041,4133.99813 C132.425041,4137.31761 129.555189,4139.99719 126,4139.99719 Z" id="Location_Pin"></path>
+        </g>
+    </g>
+</svg>

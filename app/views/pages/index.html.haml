@@ -1,1 +1,15 @@
-%h1 Homepage
+= render 'navbar'
+= render 'hero'
+.tt-content-wrap
+  .tt-section
+    = render 'about'
+  .tt-section
+    = render 'products'
+  .tt-section#team-section
+    %h2
+      The people that make all this possible
+  .tt-section
+    = render 'team_slide'
+  .tt-section#contact
+    = render 'contact'
+= render 'footer'

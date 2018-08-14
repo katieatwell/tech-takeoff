@@ -13,3 +13,274 @@
  *= require_tree .
  *= require_self
  */
+  @import 'variables';
+  @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+  @import 'mixins';
+  @import 'navbar';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+}
+h1 {
+  @include font($accentFont, $blue, 4rem, 700);
+}
+h2 {
+  @include font($accentFont, #fff, 3rem, 700, 2px);
+}
+h3 {
+  @include font($accentFont, #000, 2.4rem);
+}
+h1, h2, h3 {
+  text-transform: uppercase;
+  padding: 1rem 0rem;
+}
+p {
+  padding-top: 1rem;
+  line-height: 1.8;
+  @include font($regularFont, #000, 1.6rem);
+}
+.carousel {
+  height: 100vh;
+}
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0;
+  margin: 0rem;
+}
+.carousel-item {
+  height: 100%;
+  width: 100%;
+}
+.tt-hero-slide {
+  @include background(center, cover);
+  width: 100%;
+  height: 100%;
+}
+.hero-cta {
+  position: absolute;
+  bottom: 0rem;
+  background-color: $blue;
+  text-transform: uppercase;
+  font-weight: 600;
+  @include font($accentFont, #fff, 2rem);
+  letter-spacing: normal;
+  width: 40rem;
+  height: 14rem;
+  padding: 2.8rem;
+}
+.tt-content-wrap {
+  padding: 4rem 0rem;
+  margin: 0 auto;
+}
+.tt-section {
+  padding: 3rem 8rem;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  &#team-section {
+    background-image: image-url('campfire.jpg');
+    @include background(center, cover, no-repeat);
+    padding: 2rem;
+    max-width: 100%;
+    height: 44rem;
+    text-align: center;
+  }
+  &#contact {
+    background-color: $medBlue;
+    h1 {
+      color: #fff;
+    }
+    h3 {
+      color: #fff;
+    }
+  } 
+}
+.tt-section:nth-child(2)  {
+  padding-bottom: 0;
+}
+.screenshot {
+  height: 100%;
+  @include background(center, 90%, no-repeat);
+}
+.tt-application {
+  height: auto;
+  min-height: 68rem;
+  @include background(bottom right, 34%, no-repeat);
+  background-image: image-url('blueprint-bg.png');
+  position: relative;
+}
+.tt-products {
+  padding: 0rem 0rem; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 15.8rem;
+  border: 1px solid #ccc;
+  .tt-product {
+    align-self: center;
+    width: 25%;
+    height: 100%;
+    position: relative;
+    background-position: 50% 34%;
+    background-size: 20%;
+    text-align: center;
+    background-repeat: no-repeat;
+    .label {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: 1.4rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      left: 0;
+      right: 0;
+    }
+    &#production {
+      background-image: image-url('icons/production.svg');
+    }
+    &#material {
+      background-image: image-url('icons/material.svg');
+    }
+    &#commercial {
+      background-image: image-url('icons/commercial.svg');
+    }
+    &#custom {
+      background-image: image-url('icons/custom.svg');
+    }
+  }
+}
+.tt-product:nth-child(-n+3) {
+  border-right: 1px solid #ccc;
+}
+.product-desc {
+  margin-top: 2rem;
+  padding: 2rem 0rem;
+  width: 44%;
+}
+.tt-team-slide {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  .member-image {
+    width: 30%;
+    align-self: center;
+    height: auto;
+    max-width: 24rem;
+    max-height: 32rem;
+  }
+  .member-info {
+    width: 70%;
+    margin-left: 2%;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-content: center;
+  }
+}
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  flex-wrap: no-wrap;
+  .tt-contact-link {
+    width: 100%;
+    height: 4rem;
+    padding-bottom: 1rem;
+    @include font($regularFont, #fff, 1.2rem);
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 2rem;
+      height: 1.8rem;
+      margin-right: .8rem;
+      margin-top: .2rem;
+      @include background(center, contain, no-repeat);
+    }
+    &#map {
+      &:before {
+        background-image: image-url('icons/map.svg');
+      }
+    }
+    &#email {
+      &:before {
+        background-image: image-url('icons/mail.svg');
+      }
+    }
+    &#phone {
+      &:before {
+        background-image: image-url('icons/call.svg');
+      }
+    }
+    &#career {
+      &:before {
+        background-image: image-url('icons/career.svg');
+      }
+    }
+  }
+}
+fieldset {
+  width: 100%;
+  height: 100%;
+  input {
+    width: 80%;
+    height: 5rem;
+    @include font($regularFont, #2d2d2d, 1.2rem);
+    margin: .6rem auto;
+    padding: 2rem 2rem;
+    border-radius: .8rem;
+    border: 1px solid #fff;
+    &:focus {
+      border-radius: 1rem;
+    }
+  }
+  textarea {
+    @include font($regularFont, #2d2d2d, 1.2rem);
+    height: 15rem;
+    margin: .6rem auto;
+    padding: 2rem 2rem;
+    border-radius: .8rem;
+    width: 80%;
+    border: 1px solid #fff;
+  }
+  .button-div {
+    width: 80%;
+    margin: .6rem auto;
+    button {
+      width: 20rem;
+      float: right;
+      background-color: $blue;
+      @include font($accentFont, #fff, 1.8rem, 700);
+      text-transform: uppercase;
+      height: 5rem;
+      border-radius: .8rem;
+      border: 1px solid $blue;
+      padding: .2rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
