@@ -19,6 +19,7 @@ gem 'haml'
 gem 'haml-rails', '>= 0.3.4', :group => :development
 gem 'bootstrap'
 gem 'jquery-rails'
+gem "jquery-slick-rails"
 # gem 'owlcarousel-rails'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -26,6 +27,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'sendgrid-ruby'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

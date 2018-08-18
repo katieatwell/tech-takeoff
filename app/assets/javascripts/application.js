@@ -17,22 +17,44 @@
 //= require jquery3
 //= require bootstrap
 //= require_tree .
+//= require jquery.slick
 
 $(document).ready(function() {
-	var heroSlider = function() {
-		var currentSlide = 0;
-		var count = $('.carousel-item').length;
-
-		$('.carousel-item').hide();
-		$('.carousel-item').eq(0).show();
-
-		setInterval(function() {    
-	    $('.carousel-item').eq(currentSlide).fadeOut(function () {
-	      $(this).removeClass('active');
-	      currentSlide = (currentSlide + 1) % count;
-	      $('.carousel-item').eq(currentSlide).addClass('active').fadeIn();
-	    })
-		}, 5000)
-	}
-	heroSlider();
+  $('div[data-ride="slick"]').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    autoplaySpeed: 1000,
+    autoplay: true,
+    speed: 1000,
+    pauseOnHover: false,
+    fade: true,
+    cssEase: 'linear'
+  });
+  $('.screenshots').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 1,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
 })

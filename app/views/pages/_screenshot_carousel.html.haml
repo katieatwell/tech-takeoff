@@ -1,4 +1,3 @@
 - tt_ss_images = ApplicationHelper::SCREENSHOT_IMAGE
 - tt_ss_images.each do |screenshot| 
-  - screenshot = 'assets/' + screenshot
-  .screenshot{:style => "background-image: url(#{screenshot})"}
+  = image_tag ("#{screenshot}")
