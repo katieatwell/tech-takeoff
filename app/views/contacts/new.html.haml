@@ -1,0 +1,19 @@
+%fieldset
+  = form_for @contact do |f|
+    .row
+      = f.label :name 
+      = f.text_field :name, :placeholder => 'Name', :required => true
+    .row
+      = f.label :email 
+      = f.text_field :email, :placeholder => 'Email Address', :required => true
+    .row
+      = f.label :phone
+      = f.text_field :phone, :placeholder => 'Phone Number', :required => true
+    .row
+      = f.label :message
+      = f.text_area :message, :placeholder => 'Message', :required => false
+    .row
+      .button-div
+        %button{ :type => 'submit' }
+          Submit
+          

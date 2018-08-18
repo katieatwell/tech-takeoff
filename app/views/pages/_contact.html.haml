@@ -1,3 +1,5 @@
+:ruby 
+  @contact = Contact.new
 .row
   .col-md-6.col-sm-12
     %h1
@@ -10,28 +12,18 @@
       = link_to 'support@techtakeoff.com', 'mailto:support@techtakeoff.com', class: 'tt-contact-link', id: 'email'
       = link_to 'Career Opportunities', '', target: '_blank',class: 'tt-contact-link', id: 'career'
   .col-md-6.col-sm-12
-    %form
-      %fieldset
+    %fieldset
+      = form_for @contact, :url => {:controller => 'contacts', :action => 'create'} do |f|
         .row
-          %input{:type => 'text', :placeholder => 'Name'}
+          = f.text_field :name, :placeholder => 'Name', :required => true
         .row
-          %input{:type => 'text', :placeholder => 'Email Address'}
+          = f.text_field :email, :placeholder => 'Email Address', :required => true
         .row
-          %input{:type => 'text', :placeholder => 'Phone Number'}
+          = f.text_field :phone, :placeholder => 'Phone Number', :required => true
         .row
-          %textarea.comment{:type => 'text', :placeholder => 'Message' } 
+          = f.text_area :message, :placeholder => 'Message', :required => false
         .row
           .button-div
             %button{ :type => 'submit' }
               Submit
-    -# = simple_form_for :contact, method: :post, role: "form", class: "form-horizontal" do |f| 
-    -#   .panel.panel-primary
-    -#     .panel-heading
-    -#       %p
-    -#         the login form
-    -#     .panel-body
-    -#       = f.input :email
-    -#       = f.input :password
-    -#       = f.input :remember_me, as: :boolean, label: false, inline_label: "Stay connected"
-    -#     .panel-footer
-    -#       = f.submit "Login", class: "btn btn-primary"
+              
