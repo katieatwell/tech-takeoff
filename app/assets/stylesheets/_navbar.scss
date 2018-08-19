@@ -5,7 +5,21 @@
   z-index: 999;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+  @include tablet {
+    background-color: $medBlue;
+    z-index: 99999;
+    max-height: 80%;
+  }
+}
+#toggle-btn {
+  background-image: image-url('icons/menu.svg');
+  height: 2rem;
+  width: 2rem;
+  @include background(center, cover);
 }
 .tt-nav-item {
   color: #fff;
@@ -18,9 +32,12 @@
 }
 .tt-logo {
   background-image: image-url('logo.png');
-  height: 12rem;
+  height: 10rem;
   width: 30rem;
   @include background(center, cover);
+  @include lg-phone {
+    width: 20rem;
+  }
 }
 footer {
   position: absolute;

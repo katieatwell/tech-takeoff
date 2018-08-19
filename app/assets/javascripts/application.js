@@ -18,8 +18,15 @@
 //= require bootstrap
 //= require_tree .
 //= require jquery.slick
+//= require jquery.easing
 
 $(document).ready(function() {
+  $(document).on('click', '.tt-product', function(e) {
+    var element = this.getAttribute('data-product');
+    var target = $('p[class*="product-desc-"]');
+    $('p[class*="product-desc-"]').removeClass('active');
+    $('.product-desc-' + element).addClass('active');
+  })
   $('div[data-ride="slick"]').slick({
     dots: false,
     arrows: false,
@@ -31,30 +38,54 @@ $(document).ready(function() {
     fade: true,
     cssEase: 'linear'
   });
-  $('.screenshots').slick({
-    centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 1,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
+  (function($) {
+    "use strict";
+    $('a.scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: (target.offset().top - 104)
+          }, 1000, "easeInOutExpo");
+          return false;
         }
       }
-    ]
-  });
+    });
+    $('.scroll-trigger').click(function() {
+      $('.navbar-collapse').collapse('hide');
+    });
+    $('body').scrollspy({
+      target: '#mainNav',
+      offset: 104
+    });
+
+  })(jQuery);
+
+  // $('.screenshots').slick({
+  //   centerMode: true,
+  //   centerPadding: '60px',
+  //   slidesToShow: 1,
+  //   dots: true,
+  //   responsive: [
+  //     {
+  //       breakpoint: 768,
+  //       settings: {
+  //         arrows: false,
+  //         centerMode: true,
+  //         centerPadding: '40px',
+  //         slidesToShow: 1
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         arrows: false,
+  //         centerMode: true,
+  //         centerPadding: '40px',
+  //         slidesToShow: 1
+  //       }
+  //     }
+  //   ]
+  // });
 })
