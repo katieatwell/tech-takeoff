@@ -24,10 +24,17 @@
 .tt-nav-item {
   color: #fff;
   width: 14rem;
+  @include tablet {
+    width: 100%;
+  }
   a {
     @include font(inherit, #fff, 2.4rem);
     text-transform: uppercase;
     font-weight: normal;
+    @include tablet {
+      text-align: center;
+      padding: 1rem 0rem;
+    }
   }
 }
 .tt-logo {
@@ -43,21 +50,41 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 7rem;
+  height: 8rem;
   background-color: $darkBlue;
   .footer-section {
     width: 40rem;
     margin: 0 auto;
+    height: 100%;
     @include font($regularFont, $blue, 1rem);
     text-align: center;
     .icon-row {
       display: flex;
       flex-direction: row;
       width: 100%;
-      align-items: space-between;
+      height: 50%;
+      margin-top: 2rem;
+      justify-content: center;
       a {
         width: 19%;
+        height: 2rem;
         margin: .2%;
+        @include background (center, contain);
+        &#linked {
+          background-image: image-url('icons/linked.svg');
+        }
+        &#fb {
+          background-image: image-url('icons/fb.svg');
+        }
+        &#insta {
+          background-image: image-url('icons/insta.svg');
+        }
+        &#twitter {
+          background-image: image-url('icons/twitter.svg');
+        }
+        &#youtube {
+          background-image: image-url('icons/youtube.svg');
+        }
       }
     }
   }

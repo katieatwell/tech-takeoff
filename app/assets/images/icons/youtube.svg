@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Youtube</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mockup" transform="translate(-769.000000, -4602.000000)" fill="#0F7AC4" fill-rule="nonzero">
+            <path d="M791.81,4603.98 C791.39,4602.78 790.25,4602 788.98,4602 L773.02,4602 C771.73,4602 770.59,4602.83 770.17,4604.06 C769.16,4606.97 769,4609.5 769,4611 C769,4613.86 769.58,4616.25 770.19,4618.02 C770.61,4619.22 771.75,4620 773.02,4620 L788.98,4620 C790.27,4620 791.41,4619.17 791.83,4617.94 C792.84,4615.03 793,4612.5 793,4611 C793,4608.14 792.42,4605.75 791.81,4603.98 Z M778,4616 L778,4606 L786,4611 L778,4616 Z" id="Youtube"></path>
+        </g>
+    </g>
+</svg>
