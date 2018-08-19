@@ -146,7 +146,7 @@ p {
     background-image: image-url('campfire.jpg');
     @include background(center, cover, no-repeat);
     max-width: 100%;
-    height: 44rem;
+    height: 48rem;
     text-align: center;
   }
   &#contact {
@@ -211,6 +211,10 @@ p {
       width: 50%;
       border: 1px solid #ccc;
     }
+    &:hover, &:active {
+      background-color: $blue;
+      color: #fff;
+    }
     .label {
       position: absolute;
       width: 100%;
@@ -221,17 +225,45 @@ p {
       left: 0;
       right: 0;
     }
+    &.active {
+      background-color: $blue;
+      color: #fff;
+      &#production {
+        background-image: image-url('icons/production-w.svg');
+      }
+      &#material {
+        background-image: image-url('icons/material-w.svg');
+      }
+      &#commercial {
+        background-image: image-url('icons/commercial-w.svg');
+      }
+      &#custom {
+        background-image: image-url('icons/custom-w.svg');
+      }
+    }
     &#production {
       background-image: image-url('icons/production.svg');
+      &:hover {
+        background-image: image-url('icons/production-w.svg');
+      }
     }
     &#material {
       background-image: image-url('icons/material.svg');
+      &:hover {
+        background-image: image-url('icons/material-w.svg');
+      }
     }
     &#commercial {
       background-image: image-url('icons/commercial.svg');
+      &:hover {
+        background-image: image-url('icons/commercial-w.svg');
+      }
     }
     &#custom {
       background-image: image-url('icons/custom.svg');
+      &:hover {
+        background-image: image-url('icons/custom-w.svg');
+      }
     }
   }
 }
@@ -244,11 +276,8 @@ p {
 .product-desc-custom {
   margin-top: 2rem;
   padding: 2rem 0rem;
-  width: 44%;
+  width: 54%;
   display: none;
-  @include laptop {
-    width: 54%;
-  }
   @include tablet {
     width: 100%;
     margin-top: 18rem;
@@ -360,6 +389,7 @@ fieldset {
   .button-div {
     width: 80%;
     margin: .6rem auto;
+    cursor: pointer;
     button {
       width: 20rem;
       float: right;
@@ -373,7 +403,17 @@ fieldset {
     }
   }
 }
-
+.slick-dots li button:before {
+  content: '';
+  margin-right: 4px;
+  border: 1px solid #000;
+  border-radius: 100px;
+  font-family: inherit;
+  font-size: 2px;
+  height: 14px;
+  width: 14px;
+  line-height: 10px;
+}
 
 
 
