@@ -48,8 +48,8 @@ h1, h2, h3 {
 }
 p {
   padding-top: 1rem;
-  line-height: 1.8;
-  @include font($regularFont, #000, 1.6rem);
+  line-height: 1.6;
+  @include font($regularFont, #000, 1.8rem);
 }
 .carousel {
   width: auto;
@@ -92,20 +92,40 @@ p {
   background-color: $blue;
   text-transform: uppercase;
   font-weight: 600;
-  @include font($accentFont, #fff, 2rem);
   letter-spacing: normal;
   width: 40rem;
   height: 14rem;
   padding: 2.8rem;
   z-index: 999;
+  .text {
+    @include font($accentFont, #fff, 2rem);
+    @include lg-phone {
+      width: 80%;
+      padding: 1rem;
+      font-size: 1.4rem;
+    }
+  }
   @media (max-width: 991px) {
     bottom: .4rem;
   }
   @include lg-phone {
-    font-size: 1.4rem;
     height: 6rem;
     width: 100%;
-    padding: 1rem;
+    padding: 0rem;
+  }
+  .hero-arrow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $medBlue;
+    height: 30%;
+    width: 40px;
+    background-image: image-url('icons/hero-arrow.svg');
+    @include background(center, 30%);
+    @include lg-phone {
+      height: 100%;
+      width: 50px;
+    }
   }
 }
 .tt-content-wrap {
@@ -120,7 +140,7 @@ p {
   max-width: 1440px;
   margin: 0 auto;
   @include tablet {
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
   }
   &.team-section {
     background-image: image-url('campfire.jpg');
@@ -143,9 +163,20 @@ p {
     }
   } 
 }
+.about-tt {
+  padding-top: 4rem;
+  width: 100%;
+  @include tablet {
+    padding-top: 0rem;
+  }
+}
 .screenshot {
-  height: 100%;
-  @include background(center, 90%, no-repeat);
+  width: 80%;
+  margin: 0 auto;
+  img {
+    width: auto;
+    height: 40rem;
+  }
 }
 .tt-application {
   height: auto;
