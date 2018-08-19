@@ -1,11 +1,11 @@
-= render 'navbar'
-= render 'hero'
 .tt-content-wrap
-  .tt-section
+  = render 'navbar'
+  = render 'hero'
+  .tt-section#about
     = render 'about'
-  .tt-section
+  .tt-section#why
     = render 'products'
-  .tt-section#team-section
+  .tt-section.team-section#who
     %h2
       The people that make all this possible
   .tt-section

@@ -1,3 +1,4 @@
+@import 'variables';
 @mixin background($position: center, $size: contain, $repeat: no-repeat) {
   background-position: $position;
   background-size: $size;
@@ -9,4 +10,29 @@
   font-size: $size;
   font-weight: $weight;
   letter-spacing: $letter-spacing;
+}
+@mixin sm-phone {
+  @media(max-width: #{$sm-phone}) {
+    @content;
+  }
+}
+@mixin lg-phone {
+  @media(max-width: #{$lg-phone}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media(max-width: #{$tablet}) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media(max-width: #{$laptop}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media(max-width: #{$desktop}) {
+    @content;
+  }
 }
