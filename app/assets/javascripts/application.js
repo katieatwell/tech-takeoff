@@ -48,7 +48,7 @@ $(document).ready(function() {
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
           $('html, body').animate({
-            scrollTop: (target.offset().top - 24)
+            scrollTop: (target.offset().top - 104)
           }, 1000, "easeInOutExpo");
           return false;
         }
@@ -59,7 +59,7 @@ $(document).ready(function() {
     });
     $('body').scrollspy({
       target: '#mainNav',
-      offset: 24
+      offset: 104
     });
 
   })(jQuery);
@@ -88,16 +88,3 @@ $(document).ready(function() {
     ]
   });
 })
-$(window).scroll(
-    {
-      previousTop: 0
-    }, 
-    function () {
-    var currentTop = $(window).scrollTop();
-    if (currentTop < this.previousTop) {
-        $(".navbar").css({'margin-top':'0px'});
-    } else {
-        $(".navbar").css({'margin-top':'-200px'});
-    }
-    this.previousTop = currentTop;
-});

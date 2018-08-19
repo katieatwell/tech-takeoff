@@ -1,18 +1,16 @@
 @import 'mixins';
 @import 'variables';
 .tt-nav {
-  background-color: transparent;
-  z-index: 999;
+  background-color: $medBlue;
   position: fixed;
   top: 0;
   left: 0;
   transition: all .2s ease-in-out;
   right: 0;
   width: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+  z-index: 99999;
   @include tablet {
     background-color: $medBlue;
-    z-index: 99999;
     max-height: 80%;
   }
 }
