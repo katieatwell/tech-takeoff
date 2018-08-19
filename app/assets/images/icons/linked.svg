@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="19px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>LinkedIn</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mockup" transform="translate(-837.000000, -4601.000000)" fill="#0F7AC4" fill-rule="nonzero">
+            <path d="M837,4605.99737 L841,4605.99737 L841,4619.99001 L837,4619.99001 L837,4605.99737 Z M857,4612.10416 C857,4608.72593 856.24,4606.04734 852.12,4606.04734 C850.14,4606.04734 848.81,4607.21673 848.27,4608.00631 L848,4608.00631 L848,4606.00736 L844,4606.00736 L844,4620 L848,4620 L848,4612.79379 C848,4611.15466 848.51,4609.57549 850.67,4609.57549 C852.79,4609.57549 853,4611.4445 853,4612.90373 L853,4619.99001 L857,4619.99001 L857,4612.10416 Z M839,4601 C837.9,4601 837,4601.89953 837,4602.99895 C837,4604.09837 837.9,4604.9979 839,4604.9979 C840.1,4604.9979 841,4604.09837 841,4602.99895 C841,4601.89953 840.1,4601 839,4601 Z" id="LinkedIn"></path>
+        </g>
+    </g>
+</svg>

@@ -63,7 +63,7 @@ p {
     margin-top: 10rem;
   }
   @include lg-phone {
-    margin-top: 7rem;
+    margin-top: 10rem;
   }
 }
 .carousel-inner {
@@ -98,11 +98,14 @@ p {
   height: 14rem;
   padding: 2.8rem;
   z-index: 999;
+  @media (max-width: 991px) {
+    bottom: .4rem;
+  }
   @include lg-phone {
     font-size: 1.4rem;
-    height: 8rem;
+    height: 6rem;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
   }
 }
 .tt-content-wrap {
@@ -128,6 +131,10 @@ p {
   }
   &#contact {
     background-color: $medBlue;
+    padding: 6rem 8rem;
+    @include tablet {
+      padding: 4rem 2rem;
+    }
     h1 {
       color: #fff;
     }
@@ -161,6 +168,7 @@ p {
   }
   .tt-product {
     align-self: center;
+    cursor: pointer;
     width: 25%;
     height: 100%;
     position: relative;
