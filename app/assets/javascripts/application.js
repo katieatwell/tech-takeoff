@@ -23,11 +23,33 @@
 $(document).ready(function() {
   $(document).on('click', '.tt-product', function(e) {
     $('div[class^="tt-product"]').removeClass('active');
-    console.log()
     $(this).toggleClass('active');
     var element = this.getAttribute('data-product');
     $('p[class*="product-desc-"]').removeClass('active');
     $('.product-desc-' + element).addClass('active');
+  })
+  $('#career').on('mouseenter', function(e) {
+    console.log('enter')
+    $('.career-opp').css({'transform': 'translateY(-40px)'});
+    $('.show-message').css({'bottom': '-1px'});
+  })
+  $('#career').on('mouseleave', function(e) {
+    $('.career-opp').css({'transform': 'translateY(0px)'});
+    $('.show-message').css({'bottom': '-40px'});
+  })
+  var index = 1;
+  $('.arrow-right').on('click', function(e) {
+    var $slides = $(document.querySelectorAll('.tt-team-slide'));
+    $slides.each(function(i, el) {
+      $(el).removeClass('active');
+      if (index == i) {
+        $(this).addClass('active');
+      }
+    })
+    index ++;
+    if (index > $slides.length - 1) {
+      index = 0;
+    }
   })
   $('div[data-ride="slick"]').slick({
     dots: false,
