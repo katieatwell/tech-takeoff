@@ -10,18 +10,22 @@
       = link_to '9815 Sam Furr Rd Ste J Huntersville, NC 28078', 'https://www.google.com/maps/place/9815+Sam+Furr+Rd+Ste+J,+Huntersville,+NC+28078/@35.44257,-80.8634474,17z/data=!3m1!4b1!4m5!3m4!1s0x8856a903eda0392f:0xf4a0eabb371b5b85!8m2!3d35.44257!4d-80.8612587', target: '_blank', class: 'tt-contact-link', id: 'map'
       = link_to '(555)-555-5555', 'tel:(555)-555-5555', class: 'tt-contact-link', id: 'phone'
       = link_to 'support@techtakeoff.com', 'mailto:support@techtakeoff.com', class: 'tt-contact-link', id: 'email'
-      = link_to 'Career Opportunities', '', target: '_blank',class: 'tt-contact-link', id: 'career'
+      = link_to 'mailto:careers@techtakeoff.com', class: 'tt-contact-link', id: 'career' do
+        .career-opp
+          Career Opportunities
+        .show-message
+          Click here to send us your resume!
   .col-md-6.col-sm-12
     %fieldset
-      = form_for @contact, :url => {:controller => 'contacts', :action => 'create'} do |f|
+      %form{:action => 'https://formspree.io/support@techtakeoff.com', :method => 'POST'}
         .row
-          = f.text_field :name, :placeholder => 'Name', :required => true
+          %input{ :type => 'text', :placeholder => 'Name', :required => true, :name => 'Name' }
         .row
-          = f.text_field :email, :placeholder => 'Email Address', :required => true
+          %input{ :type => 'email', :placeholder => 'Email Address', :required => true, :name => 'Email'}
         .row
-          = f.text_field :phone, :placeholder => 'Phone Number', :required => true
+          %input{ :type => 'text', :placeholder => 'Phone Number', :required => true, :name => 'Phone'}
         .row
-          = f.text_area :message, :placeholder => 'Message', :required => false
+          %textarea{ :type => 'text', :placeholder => 'Message', :required => true, :name => 'Message'}
         .row
           .button-div
             %button{ :type => 'submit' }
