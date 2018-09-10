@@ -8,8 +8,10 @@
   .tt-section.team-section#who
     %h2
       The people that make all this possible
-  .tt-section
+  .tt-section#team
     = render 'team_slide'
+    .arrow-right
+      = image_tag('icons/arrow-right.svg', :alt => 'Arrow', class: 'Arrow Right')
   .tt-section#contact
     = render 'contact'
 = render 'footer'

@@ -1,9 +1,9 @@
 - tt_images = ApplicationHelper::HERO_IMAGE
 #carousel.carousel.slide#home
-  .hero-cta
+  %a.hero-cta.scroll-trigger{ :href => '#about'}
     .text
       Integrating Technology Into The Contrustion Industry
-    %a.hero-arrow.scroll-trigger{ :href => '#about'}
+    .hero-arrow
   .carousel-inner{'data-ride' => 'slick'}
     - tt_images.each do |tt_image| 
       .tt-hero-slide
