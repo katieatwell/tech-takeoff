@@ -48,8 +48,10 @@ $(document).ready(function() {
         $('#production').addClass('active');
       }, 500);
     }
-    if ($(window).scrollTop() >= $('#who').offset().top - 110) {
-      $('.type').addClass('typewriter');
+    if ($(window).width() > 991) {
+      if ($(window).scrollTop() >= $('#who').offset().top - 110) {
+        $('.type').addClass('typewriter');
+      }
     }
   })
   $('#career').on('mouseenter', function(e) {
@@ -102,7 +104,7 @@ $(document).ready(function() {
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
         if (target.length) {
           $('html, body').animate({
-            scrollTop: (target.offset().top - 104)
+            scrollTop: (target.offset().top - 84)
           }, 1000, "easeInOutExpo");
           return false;
         }

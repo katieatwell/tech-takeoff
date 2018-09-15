@@ -305,6 +305,9 @@ p {
   &.active {
     display: block;
   }
+  @media(max-width: 991px) {
+    height: 440px;
+  }
   @include tablet {
     margin-top: 160px;
   }
@@ -321,6 +324,9 @@ p {
   width: 68%;
   height: 0%;
   margin-top: -50%;
+  @media(max-width: 991px) {
+    width: 90%;
+  }
   @include tablet {
     width: 100%;
     margin-top: 18rem;
@@ -558,6 +564,9 @@ img.tt-screenshot {
 }
 .type {
   display: none;
+  @media(max-width: 991px) {
+    display: block;
+  }
 }
 h2.typewriter {
   display: inline-block;
@@ -568,7 +577,7 @@ h2.typewriter {
   border-right: 2px solid transparent; 
   white-space: nowrap; 
   animation: 
-    typing 3.5s steps(40, end),
+    typing 3s steps(40, end),
     blink-caret .75s step-end 4;
 }
 
