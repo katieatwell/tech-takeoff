@@ -19,14 +19,38 @@
 //= require_tree .
 //= require jquery.slick
 //= require jquery.easing
-
 $(document).ready(function() {
+
+  $('.tt-team-slide').each(function(i) {
+    $('.section-dots').append("<div class='dot'></div>");
+  })
+
+  $('.dot').each(function(i) {
+    $(this).attr('data-dot', i);
+    if (i == 0) {
+      $(this).addClass('active');
+    }
+  })
+
   $(document).on('click', '.tt-product', function(e) {
     $('div[class^="tt-product"]').removeClass('active');
     $(this).toggleClass('active');
     var element = this.getAttribute('data-product');
-    $('p[class*="product-desc-"]').removeClass('active');
-    $('.product-desc-' + element).addClass('active');
+    $('.desc-container').removeClass('active');
+    $('.' + element).addClass('active');
+    $('p[class*="product-desc-"]').removeClass('active').addClass('active');
+    $('.product-desc-' + element).removeClass('inactive').addClass('active').animate({"height": "100%", "margin-top": "0%"}, 1000);
+  })
+  $(window).on('scroll', function() {
+    if ($(window).scrollTop() >= $('#why').offset().top - 110) {
+      $('.product-desc-production').addClass('active').animate({"height": "100%", "margin-top": "0%"}, 1000);
+      setTimeout(function() {
+        $('#production').addClass('active');
+      }, 500);
+    }
+    if ($(window).scrollTop() >= $('#who').offset().top - 110) {
+      $('.type').addClass('typewriter');
+    }
   })
   $('#career').on('mouseenter', function(e) {
     console.log('enter')
@@ -37,20 +61,28 @@ $(document).ready(function() {
     $('.career-opp').css({'transform': 'translateY(0px)'});
     $('.show-message').css({'bottom': '-40px'});
   })
+
   var index = 1;
-  $('.arrow-right').on('click', function(e) {
-    var $slides = $(document.querySelectorAll('.tt-team-slide'));
-    $slides.each(function(i, el) {
+  $('.arrow-right, .dot').on('click', function(e) {
+    $('.tt-team-slide').each(function(i, el) {
       $(el).removeClass('active');
       if (index == i) {
         $(this).addClass('active');
       }
     })
+    $('.dot').each(function(i, el) {
+      if ($(this).attr('data-dot') == (index)) {
+        console.log(index)
+        $('.dot').toggleClass('active');
+      }
+    })
     index ++;
-    if (index > $slides.length - 1) {
+    if (index > $('.tt-team-slide').length - 1) {
       index = 0;
     }
   })
+
+
   $('div[data-ride="slick"]').slick({
     dots: false,
     arrows: false,
