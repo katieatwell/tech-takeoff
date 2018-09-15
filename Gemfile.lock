@@ -172,6 +172,10 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rename (1.0.6)
+      activesupport
+      rails (>= 3.0.0)
+      thor (>= 0.19.1)
     ruby_dep (1.5.0)
     ruby_parser (3.11.0)
       sexp_processor (~> 4.9)
@@ -246,6 +250,7 @@ DEPENDENCIES
   pg (~> 0.11)
   puma (~> 3.11)
   rails (~> 5.2.0)
+  rename
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
@@ -259,4 +264,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.3
+   1.16.4
