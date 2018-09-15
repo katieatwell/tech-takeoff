@@ -105,9 +105,13 @@ footer {
       justify-content: center;
       a {
         width: 19%;
-        height: 1.4rem;
+        height: 1.6rem;
         margin: .2%;
         @include background (center, contain);
+        transition: all .4s ease;
+        &:hover {
+          transform: scale(1.3);
+        }
         &#linked {
           background-image: image-url('icons/linked.svg');
         }

@@ -7,12 +7,10 @@ module ApplicationHelper
     'hero-5.jpg',
   ].freeze
   SCREENSHOT_IMAGE = [
-    'screenshot.png',
-    'screenshot-2.png',
-    'screenshot-3.png',
-    'screenshot-4.png',
-    'screenshot-5.png',
-    'screenshot-6.png',
-    'screenshot-7.png',
+    'screenshot_1.png',
+    'screenshot_2.png',
+    'screenshot_3.png',
+    'screenshot_4.png',
+    'screenshot_5.png',
   ].freeze
 end

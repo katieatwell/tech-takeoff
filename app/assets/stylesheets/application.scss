@@ -297,20 +297,45 @@ p {
 .tt-product:nth-child(-n+3) {
   border-right: 1px solid #ccc;
 }
+.desc-container {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  display: none;
+  &.active {
+    display: block;
+  }
+  @media(max-width: 991px) {
+    height: 440px;
+  }
+  @include tablet {
+    margin-top: 160px;
+  }
+  @include lg-phone {
+    height: 600px;
+  }
+}
 .product-desc-production,
 .product-desc-material,
 .product-desc-commercial,
 .product-desc-custom {
   margin-top: 2rem;
   padding: 2rem 0rem;
-  width: 54%;
-  display: none;
+  width: 68%;
+  height: 0%;
+  margin-top: -50%;
+  @media(max-width: 991px) {
+    width: 90%;
+  }
   @include tablet {
     width: 100%;
     margin-top: 18rem;
   }
   &.active {
     display: block;
+  }
+  &.inactive {
+    display: none;
   }
 }
 .tt-team-slide {
@@ -357,6 +382,26 @@ p {
     @include tablet {
       width: 100%;
     }
+  }
+}
+.section-dots {
+  width: 48px;
+  margin: 0 auto;
+  display: block;
+}
+.dot {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border: 1px solid $darkGrey;
+  border-radius: 100px;
+  margin: 2px;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #000;
+  }
+  &.active {
+    border: 1px solid #000;
   }
 }
 .arrow-right {
@@ -489,6 +534,12 @@ fieldset {
       border-radius: .8rem;
       border: 1px solid $blue;
       padding: .2rem;
+      position: relative;
+      transition: all .3s ease;
+      &:hover {
+       background-color: $darkBlue;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -503,9 +554,42 @@ fieldset {
   width: 14px;
   line-height: 10px;
 }
+img.tt-screenshot {
+  max-height: 500px;
+  width: 100%;
+  object-fit: contain;
+}
+.slick-slide {
+  width: 400px;
+}
+.type {
+  display: none;
+  @media(max-width: 991px) {
+    display: block;
+  }
+}
+h2.typewriter {
+  display: inline-block;
+  overflow: hidden; 
+  width: auto;
+  max-width: auto;
+  margin: 0 auto;
+  border-right: 2px solid transparent; 
+  white-space: nowrap; 
+  animation: 
+    typing 3s steps(40, end),
+    blink-caret .75s step-end 4;
+}
 
+@keyframes typing {
+  from { width: 0; }
+  to { width: 70%; }
+}
 
-
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: $darkGrey; }
+}
 
 
 
