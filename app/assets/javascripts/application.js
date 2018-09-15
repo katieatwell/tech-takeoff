@@ -31,6 +31,23 @@ $(document).ready(function() {
       $(this).addClass('active');
     }
   })
+  var fire = 0;
+  $(window).on('scroll', function() {
+    if (fire == 0) {
+      if ($(window).scrollTop() >= $('#why').offset().top - 110) {
+        fire += 1;
+        $('.product-desc-production').addClass('active').animate({"height": "100%", "margin-top": "0%"}, 1000);
+        setTimeout(function() {
+          $('#production').addClass('active');
+        }, 500);
+      }
+    }
+    if ($(window).width() > 991) {
+      if ($(window).scrollTop() >= $('#who').offset().top - 110) {
+        $('.type').addClass('typewriter');
+      }
+    }
+  })
 
   $(document).on('click', '.tt-product', function(e) {
     $('div[class^="tt-product"]').removeClass('active');
@@ -41,21 +58,8 @@ $(document).ready(function() {
     $('p[class*="product-desc-"]').removeClass('active').addClass('active');
     $('.product-desc-' + element).removeClass('inactive').addClass('active').animate({"height": "100%", "margin-top": "0%"}, 1000);
   })
-  $(window).on('scroll', function() {
-    if ($(window).scrollTop() >= $('#why').offset().top - 110) {
-      $('.product-desc-production').addClass('active').animate({"height": "100%", "margin-top": "0%"}, 1000);
-      setTimeout(function() {
-        $('#production').addClass('active');
-      }, 500);
-    }
-    if ($(window).width() > 991) {
-      if ($(window).scrollTop() >= $('#who').offset().top - 110) {
-        $('.type').addClass('typewriter');
-      }
-    }
-  })
+
   $('#career').on('mouseenter', function(e) {
-    console.log('enter')
     $('.career-opp').css({'transform': 'translateY(-40px)'});
     $('.show-message').css({'bottom': '-1px'});
   })
@@ -74,7 +78,6 @@ $(document).ready(function() {
     })
     $('.dot').each(function(i, el) {
       if ($(this).attr('data-dot') == (index)) {
-        console.log(index)
         $('.dot').toggleClass('active');
       }
     })
@@ -83,7 +86,6 @@ $(document).ready(function() {
       index = 0;
     }
   })
-
 
   $('div[data-ride="slick"]').slick({
     dots: false,
@@ -144,3 +146,4 @@ $(document).ready(function() {
     ]
   });
 })
+
