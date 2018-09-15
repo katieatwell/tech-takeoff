@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'mail_form'
 gem 'jquery-easing-rails'
 gem 'rename'
+gem 'zip'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
