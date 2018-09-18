@@ -524,9 +524,9 @@ fieldset {
     width: 80%;
     margin: .6rem auto;
     cursor: pointer;
+    text-align: center;
     button {
       width: 20rem;
-      float: right;
       background-color: $blue;
       @include font($accentFont, #fff, 1.8rem, 700);
       text-transform: uppercase;
