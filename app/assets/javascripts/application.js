@@ -22,16 +22,16 @@ $(document).ready(function() {
   var fire = 0;
   $(window).on('scroll', function() {
     if (fire == 0) {
-      if ($(window).scrollTop() >= $('#why').offset().top - 110) {
+      if ($(window).scrollTop() >= $('#why').offset().top - 200) {
         fire += 1;
         $('.product-desc-production').addClass('active').animate({"height": "100%", "margin-top": "0%"}, 1000);
         setTimeout(function() {
           $('#production').addClass('active');
-        }, 500);
+        }, 1200);
       }
     }
     if ($(window).width() > 991) {
-      if ($(window).scrollTop() >= $('#who').offset().top - 110) {
+      if ($(window).scrollTop() >= $('#who').offset().top - 200) {
         $('.type').addClass('typewriter');
       }
     }

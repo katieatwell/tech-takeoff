@@ -521,15 +521,15 @@ fieldset {
     border: 1px solid #fff;
   }
   .button-div {
-    width: 90%;
-    margin: .6rem;
+    width: 80%;
+    margin: .6rem auto;
     cursor: pointer;
+    text-align: right;
     @include lg-phone {
       text-align: center;
     }
-    button {
+     button {
       width: 20rem;
-      float: right;
       background-color: $blue;
       @include font($accentFont, #fff, 1.8rem, 700);
       text-transform: uppercase;
