@@ -521,9 +521,12 @@ fieldset {
     border: 1px solid #fff;
   }
   .button-div {
-    width: 80%;
-    margin: .6rem auto;
+    width: 90%;
+    margin: .6rem;
     cursor: pointer;
+    @include lg-phone {
+      text-align: center;
+    }
     button {
       width: 20rem;
       float: right;
