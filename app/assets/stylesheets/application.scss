@@ -28,6 +28,7 @@
 }
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 body {
   width: 100%;
@@ -312,7 +313,7 @@ p {
     margin-top: 160px;
   }
   @include lg-phone {
-    height: 600px;
+    height: 700px;
   }
 }
 .product-desc-production,
